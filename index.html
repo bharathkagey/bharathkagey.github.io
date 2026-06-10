@@ -300,21 +300,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
       <span class="project-tag">Die Development · HPDC · Tesla GIGA Castings</span>
       <div class="project-title">FRUB Die Development — 200,000 Shot Die Life Program</div>
 
-      <div class="carousel" id="c0">
-        <div class="carousel-track">
-          <div class="carousel-slide"><div class="slide-visual">🏭<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Insert Architecture Diagram</span></div><div class="slide-caption">Sub-inserted cavity block layout with dedicated insert holder — modular replacement zones</div></div>
-          <div class="carousel-slide"><div class="slide-visual">🌡️<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">MAGMASOFT Thermal Simulation</span></div><div class="slide-caption">BTU-calculated conformal cooling layout — die face thermal balance map (cover half)</div></div>
-          <div class="carousel-slide"><div class="slide-visual">⚙️<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Runner & Gating Design</span></div><div class="slide-caption">Redesigned runner system — motor cover and wheel house fill optimization</div></div>
-          <div class="carousel-slide"><div class="slide-visual">🔩<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Al Manifold & Coupler Assembly</span></div><div class="slide-caption">6061 aluminum manifold with brass quick-connect couplers — plug-and-play cooling interface</div></div>
-        </div>
-        <button class="carousel-btn prev" onclick="moveCarousel('c0',-1)">&#8249;</button>
-        <button class="carousel-btn next" onclick="moveCarousel('c0',1)">&#8250;</button>
-        <div class="carousel-dots" id="c0-dots">
-          <div class="dot active" onclick="goSlide('c0',0)"></div>
-          <div class="dot" onclick="goSlide('c0',1)"></div>
-          <div class="dot" onclick="goSlide('c0',2)"></div>
-          <div class="dot" onclick="goSlide('c0',3)"></div>
-        </div>
+      <div style="margin-bottom:1.2rem;border-radius:6px;overflow:hidden;border:1px solid var(--border)">
+        <img src="images/9.webp" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block">
       </div>
 
       <div class="obj-result">
@@ -353,12 +340,9 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
 
       <div class="carousel" id="c1">
         <div class="carousel-track">
-          <div class="carousel-slide"><div class="slide-visual">🔄<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">MAGMASOFT Flow Simulation</span></div><div class="slide-caption">Multi-concept fill trace comparison — melt velocity and temperature distribution at each gate</div></div>
-          <div class="carousel-slide"><div class="slide-visual">📐<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Rear Node Dual-Cavity Layout</span></div><div class="slide-caption">Dual-cavity runner and venting system designed from scratch using NADCA and Buhler equations</div></div>
-          <div class="carousel-slide"><div class="slide-visual">🌡️<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Thermal Balance Map — Torque Box</span></div><div class="slide-caption">Cover and ejector half thermal simulation — cooling circuit optimization and soldering risk zones</div></div>
-          <div class="carousel-slide"><div class="slide-visual">🌡️<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">MAGMASOFT Thermal Map — Shock Tower</span></div><div class="slide-caption">Add your Shock Tower thermal simulation here — die surface temperature distribution and hot spot identification</div></div>
-          <div class="carousel-slide"><div class="slide-visual">❄️<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Shock Tower Cooling Circuit Redesign</span></div><div class="slide-caption">Add your Shock Tower cooling line layout here — cover and ejector half circuit routing after optimization</div></div>
-          <div class="carousel-slide"><div class="slide-visual">📏<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Shock Tower Best-Fit Gauge Fixture</span></div><div class="slide-caption">Add your 6061 Al gauge fixture photo or drawing here — casting distortion measurement on the production floor</div></div>
+          <div class="carousel-slide"><img src="images/2.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Multi-concept fill trace comparison — melt velocity and temperature distribution at each gate</div></div>
+          <div class="carousel-slide"><img src="images/3.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Dual-cavity runner and venting system designed from scratch using NADCA and Buhler equations</div></div>
+          <div class="carousel-slide"><img src="images/4.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Cover and ejector half thermal simulation — cooling circuit optimization and soldering risk zones</div></div>
         </div>
         <button class="carousel-btn prev" onclick="moveCarousel('c1',-1)">&#8249;</button>
         <button class="carousel-btn next" onclick="moveCarousel('c1',1)">&#8250;</button>
@@ -366,9 +350,6 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
           <div class="dot active" onclick="goSlide('c1',0)"></div>
           <div class="dot" onclick="goSlide('c1',1)"></div>
           <div class="dot" onclick="goSlide('c1',2)"></div>
-          <div class="dot" onclick="goSlide('c1',3)"></div>
-          <div class="dot" onclick="goSlide('c1',4)"></div>
-          <div class="dot" onclick="goSlide('c1',5)"></div>
         </div>
       </div>
 
@@ -645,7 +626,7 @@ const carousels = {};
 function initCarousel(id) {
   carousels[id] = 0;
 }
-['c0','c1','c2','c3','c4','c5'].forEach(initCarousel);
+['c1','c2','c3','c4','c5'].forEach(initCarousel);
 
 function updateCarousel(id) {
   const el = document.getElementById(id);
