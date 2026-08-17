@@ -9,17 +9,17 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --sidebar-w:280px;
-  --bg:#f4f4f2;
-  --sidebar-bg:#2b2d2f;
-  --sidebar-text:#c8cdd3;
+  --bg:#f4f5f7;
+  --sidebar-bg:#1a1f2e;
+  --sidebar-text:#c4cad8;
   --sidebar-head:#ffffff;
-  --accent:#c8860a;
-  --accent-light:#e8a020;
-  --text:#2c2c2c;
-  --text-muted:#5a5a5a;
-  --border:#d8d8d4;
+  --accent:#2563eb;
+  --accent-light:#4f86f7;
+  --text:#1a1f2e;
+  --text-muted:#4a5568;
+  --border:#dde1e8;
   --section-bg:#ffffff;
-  --tag-bg:#eef0f3;
+  --tag-bg:#eef2ff;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--text);display:flex;min-height:100vh}
@@ -32,16 +32,16 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--tex
   color:var(--sidebar-text);
   display:flex;flex-direction:column;
   overflow-y:auto;z-index:200;
-  border-right:3px solid var(--accent);
+  border-right:4px solid var(--accent);
 }
 .sidebar-inner{padding:2rem 1.6rem;display:flex;flex-direction:column;min-height:100%}
 .avatar{
   width:100px;height:100px;border-radius:50%;
-  background:linear-gradient(135deg,var(--accent) 0%,#7a4e06 100%);
+  background:linear-gradient(135deg,#2563eb 0%,#1a3a8f 100%);
   display:flex;align-items:center;justify-content:center;
   font-size:2rem;font-weight:700;color:#fff;
   margin:0 auto 1.2rem;flex-shrink:0;letter-spacing:-1px;
-  border:3px solid rgba(200,134,10,0.4);
+  border:3px solid rgba(37,99,235,0.4);
 }
 .sidebar-name{font-size:1.1rem;font-weight:700;color:var(--sidebar-head);text-align:center;line-height:1.3;margin-bottom:0.25rem}
 .sidebar-role{
@@ -63,7 +63,7 @@ nav ul li a{
   color:var(--sidebar-text);text-decoration:none;font-size:0.83rem;font-weight:400;
   transition:background 0.15s,color 0.15s,padding-left 0.15s;
 }
-nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);padding-left:1rem}
+nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padding-left:1rem}
 .skill-cloud{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.25rem;align-items:flex-start;align-content:flex-start}
 .skill-pill{
   font-family:'Source Code Pro',monospace;font-size:0.6rem;
@@ -78,9 +78,9 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
 
 /* INTRO BANNER */
 #intro{
-  background:linear-gradient(135deg,#1e2530 0%,#2b2d2f 100%);
+  background:linear-gradient(135deg,#0f1320 0%,#1a1f2e 100%);
   padding:3.5rem 3rem 3rem;
-  border-bottom:3px solid var(--accent);
+  border-bottom:4px solid var(--accent);
   position:relative;overflow:hidden;
 }
 #intro::before{
@@ -101,19 +101,19 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
 .stat-l{font-size:0.65rem;color:rgba(200,205,211,0.5);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.2rem}
 
 /* SECTION WRAPPERS */
-.page-section{padding:2.5rem 3rem;border-bottom:1px solid var(--border);background:var(--section-bg)}
-.page-section:nth-child(even){background:#fafaf8}
+.page-section{padding:2.5rem 3rem;border-bottom:1px solid var(--border);background:var(--section-bg);transition:background 0.2s}
+.page-section:nth-child(even){background:#f8faff}
 .section-eyebrow{
   font-family:'Source Code Pro',monospace;font-size:0.62rem;
   text-transform:uppercase;letter-spacing:0.15em;color:var(--accent);margin-bottom:0.4rem;
 }
 .page-section h2{
-  font-size:1.5rem;font-weight:700;color:var(--text);
+  font-size:1.5rem;font-weight:700;color:var(--text);letter-spacing:-0.01em;
   border-bottom:2px solid var(--accent);padding-bottom:0.4rem;
   display:inline-block;margin-bottom:1.5rem;
 }
 
-/* PROJECT LAYOUT — matches Nathan's style */
+/* PROJECT LAYOUT */
 .project{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px dashed var(--border)}
 .project:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .project-title{
@@ -126,8 +126,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
   margin-bottom:0.9rem;display:block;
 }
 
-/* IMAGE CAROUSEL — matches Nathan's carousel style */
-.carousel{position:relative;margin-bottom:1.2rem;background:#1e2028;border-radius:6px;overflow:hidden;border:1px solid var(--border)}
+/* IMAGE CAROUSEL */
+.carousel{position:relative;margin-bottom:1.2rem;background:#0f1320;border-radius:6px;overflow:hidden;border:1px solid var(--border)}
 .carousel-track{display:flex;transition:transform 0.35s ease}
 .carousel-slide{min-width:100%;position:relative}
 .slide-visual{
@@ -135,7 +135,7 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
   display:flex;align-items:center;justify-content:center;
   flex-direction:column;gap:0.6rem;
   font-size:2.5rem;
-  background:linear-gradient(135deg,#1e2028 0%,#252830 100%);
+  background:linear-gradient(135deg,#0f1320 0%,#1a1f2e 100%);
 }
 .slide-caption{
   position:absolute;bottom:0;left:0;right:0;
@@ -154,24 +154,38 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
 .carousel-btn:hover{background:var(--accent)}
 .carousel-btn.prev{left:10px}
 .carousel-btn.next{right:10px}
-.carousel-dots{display:flex;justify-content:center;gap:6px;padding:0.5rem;background:#1e2028}
+.carousel-dots{display:flex;justify-content:center;gap:6px;padding:0.5rem;background:#0f1320}
 .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:background 0.2s}
 .dot.active{background:var(--accent-light)}
 
-/* OBJECTIVE / RESULT BLOCK — exactly like Nathan */
-.obj-result{margin:0.8rem 0 1rem;padding:1rem 1.2rem;background:#f8f7f4;border-left:3px solid var(--accent);border-radius:0 4px 4px 0}
+/* OBJECTIVE / RESULT BLOCK */
+.obj-result{margin:0.8rem 0 1rem;padding:1rem 1.2rem;background:#f0f4ff;border-left:3px solid var(--accent);border-radius:0 4px 4px 0}
 .obj-result p{font-size:0.87rem;line-height:1.65;color:var(--text);margin-bottom:0.4rem}
 .obj-result p:last-child{margin-bottom:0}
 .obj-result strong{color:var(--text);font-weight:700}
 
-/* TECHNICAL DETAILS */
+/* TECHNICAL DETAILS — hidden by default, expandable */
 .tech-details{margin-top:0.8rem}
+.tech-toggle{
+  display:flex;align-items:center;gap:0.5rem;
+  background:none;border:1px solid var(--border);border-radius:4px;
+  padding:0.4rem 0.8rem;cursor:pointer;
+  font-family:'Source Code Pro',monospace;font-size:0.68rem;
+  color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;
+  transition:border-color 0.15s,color 0.15s;
+  margin-bottom:0.5rem;
+}
+.tech-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.tech-toggle .arrow{transition:transform 0.2s;display:inline-block}
+.tech-toggle.open .arrow{transform:rotate(90deg)}
+.tech-body{display:none}
+.tech-body.open{display:block}
 .tech-details h4{font-size:0.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem}
 .tech-details ul{list-style:none;padding:0}
 .tech-details ul li{
   font-size:0.85rem;color:var(--text-muted);
   padding:0.3rem 0 0.3rem 1.1rem;
-  position:relative;border-bottom:1px solid #f0f0ec;line-height:1.5;
+  position:relative;border-bottom:1px solid #eaeff8;line-height:1.5;
 }
 .tech-details ul li:last-child{border-bottom:none}
 .tech-details ul li::before{content:"→";position:absolute;left:0;color:var(--accent);font-size:0.75rem;top:0.35rem}
@@ -180,14 +194,14 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
 .metrics{display:flex;flex-wrap:wrap;gap:0.5rem;margin:0.9rem 0}
 .metric-chip{
   font-family:'Source Code Pro',monospace;font-size:0.7rem;
-  background:#fff;border:1px solid var(--border);
+  background:#f0f4ff;border:1px solid #c7d7fc;
   color:var(--accent);padding:0.25rem 0.7rem;
   border-radius:3px;font-weight:500;
 }
 
 /* TOOLS ROW */
 .tools-row{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.8rem}
-.tool-tag{font-family:'Source Code Pro',monospace;font-size:0.65rem;background:var(--tag-bg);border:1px solid var(--border);color:var(--text-muted);padding:0.15rem 0.5rem;border-radius:3px}
+.tool-tag{font-family:'Source Code Pro',monospace;font-size:0.65rem;background:#eef2ff;border:1px solid #c7d7fc;color:#2563eb;padding:0.15rem 0.5rem;border-radius:3px}
 
 /* EXPERIENCE TIMELINE */
 .timeline{position:relative;padding-left:1.2rem}
@@ -203,7 +217,7 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
 .tl-bullets li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:0.65rem;top:0.2rem}
 
 /* EDUCATION */
-.edu-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.2rem;background:#f8f7f4;border-radius:6px;border:1px solid var(--border);margin-bottom:0.75rem}
+.edu-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.2rem;background:#f0f4ff;border-radius:6px;border:1px solid #c7d7fc;margin-bottom:0.75rem}
 .edu-icon{font-size:1.6rem;flex-shrink:0}
 .edu-deg{font-weight:700;font-size:0.9rem;color:var(--text);margin-bottom:0.15rem}
 .edu-school{font-size:0.8rem;color:var(--text-muted)}
@@ -304,6 +318,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
         <img src="images/9.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block">
       </div>
 
+      <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
+
       <div class="obj-result">
         <p><strong>Objective:</strong> Redesign the FRUB HPDC die from scratch to extend die life beyond the 140,000 shot predecessor, resolve chronic casting cracking in the motor cover and wheel house regions, and reduce cycle time.</p>
         <p><strong>Result:</strong> Achieved 200,000 shot die life (+43% over baseline), reduced cycle time from 105 sec to 85 sec (19% improvement), and eliminated chronic cracking defects through integrated architecture, cooling, and gating redesign.</p>
@@ -317,19 +333,19 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
       </div>
 
       <div class="tech-details">
-        <h4>Technical Approach</h4>
-        <ul>
-          <li>Introduced a dedicated insert holder with sub-inserted cavity blocks, replacing monolithic inserts with modular sections — each high-wear zone independently replaceable without full die strip, reducing unplanned downtime and extending overall die service life.</li>
-          <li>Engineered conformal and 3D-printed cooling channels using BTU extraction calculations to achieve die face thermal balance, directly driving the 105s → 85s cycle time reduction at Model Y production rates.</li>
-          <li>Redesigned runner and gating system to resolve melt fill deficiencies in motor cover and wheel house areas — controlled solidification front progression to eliminate crack initiation; validated in MAGMASOFT before cutting steel.</li>
-          <li>Defined surface coating treatment and heat treatment parameters zone-by-zone with steel suppliers, targeting surface hardness improvement at high-wear gating and overflow zones — coordinated with BTU cooling layout to reduce thermal cycling stress.</li>
-          <li>Integrated quick-connect 6061 aluminum cooling manifolds and brass couplers to eliminate stainless steel hard plumbing, cutting refurbishment turnaround from weeks to days.</li>
-          <li>Cross-factory knowledge exchange with Giga Berlin engineering team — captured lessons learned from their FRUB die experience and incorporated proven improvement trials into the new design baseline.</li>
-          <li>Full die assembly validated in MAGMASOFT (flow, thermal, solidification) and ANSYS (structural deformation, platen deflection, support pillar preload) prior to first steel cut.</li>
-        </ul>
-      </div>
-      <div class="tools-row">
-        <span class="tool-tag">MAGMASOFT</span><span class="tool-tag">ANSYS Static Structural</span><span class="tool-tag">CATIA V5</span><span class="tool-tag">BTU Analysis</span><span class="tool-tag">3D-Printed Cooling</span><span class="tool-tag">6061 Al</span>
+        <button class="tech-toggle" onclick="toggleTech(this)"><span class="arrow">▶</span> Technical Approach</button>
+        <div class="tech-body">
+          <h4>Technical Approach</h4>
+          <ul>
+            <li>Introduced a dedicated insert holder with sub-inserted cavity blocks, replacing monolithic inserts with modular sections — each high-wear zone independently replaceable without full die strip, reducing unplanned downtime and extending overall die service life.</li>
+            <li>Engineered conformal and 3D-printed cooling channels using BTU extraction calculations to achieve die face thermal balance, directly driving the 105s → 85s cycle time reduction at Model Y production rates.</li>
+            <li>Redesigned runner and gating system to resolve melt fill deficiencies in motor cover and wheel house areas — controlled solidification front progression to eliminate crack initiation; validated in MAGMASOFT before cutting steel.</li>
+            <li>Defined surface coating treatment and heat treatment parameters zone-by-zone with steel suppliers, targeting surface hardness improvement at high-wear gating and overflow zones — coordinated with BTU cooling layout to reduce thermal cycling stress.</li>
+            <li>Integrated quick-connect 6061 aluminum cooling manifolds and brass couplers to eliminate stainless steel hard plumbing, cutting refurbishment turnaround from weeks to days.</li>
+            <li>Cross-factory knowledge exchange with Giga Berlin engineering team — captured lessons learned from their FRUB die experience and incorporated proven improvement trials into the new design baseline.</li>
+            <li>Full die assembly validated in MAGMASOFT (flow, thermal, solidification) and ANSYS (structural deformation, platen deflection, support pillar preload) prior to first steel cut.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -353,6 +369,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
         </div>
       </div>
 
+      <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
+
       <div class="obj-result">
         <p><strong>Objective:</strong> Resolve chronic air entrapment on Torque Box, design a complete runner system for Rear Node dual-cavity die from scratch, and optimize the Shock Tower die thermal system to reduce cycle time and die soldering.</p>
         <p><strong>Result:</strong> Torque Box full shot weight reduced by 3.5 kg and cycle time from 85s to 68s. Rear Node launched through trim die buy-off into production. Shock Tower cycle time reduced from 100s to 90s with measurable reduction in die soldering and extended service life.</p>
@@ -367,15 +385,15 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
       </div>
 
       <div class="tech-details">
-        <h4>Technical Approach</h4>
-        <ul>
-          <li><strong>Gating & Flow:</strong> Designed complete runner, gating, and venting for Rear Node dual-cavity die from scratch using NADCA and Buhler equations to correctly size gate velocity and vent area across both cavities; led through trim die buy-off. Ran multi-concept MAGMASOFT flow simulations on Torque Box redesign — evaluated melt velocity, temperature distribution, pressure trace, and fill pattern across candidate designs before any steel commitment.</li>
-          <li><strong>Thermal Optimization:</strong> Simulated die thermal systems for Torque Box, Rear Node, and Shock Tower in MAGMASOFT — mapped surface temperature distribution, identified hot spots driving die soldering and heat checking, and redesigned cooling circuit routing and sequencing to achieve balanced die face temperatures. Shock Tower cooling redesign achieved 100s → 90s cycle time reduction and extended insert service intervals.</li>
-          <li><strong>Structural & Fixture:</strong> Performed ANSYS structural analysis on cover/ejector halves and DCM platens to size support pillar preload, eliminating flash from die deflection under shot pressure. Designed a 6061 machined aluminum best-fit gauge fixture for Shock Tower castings enabling instant production-floor distortion measurement without CMM setup, accelerating root cause turnaround on quality holds.</li>
-        </ul>
-      </div>
-      <div class="tools-row">
-        <span class="tool-tag">MAGMASOFT</span><span class="tool-tag">ANSYS</span><span class="tool-tag">CATIA V5</span><span class="tool-tag">NADCA Equations</span><span class="tool-tag">Buhler Equations</span><span class="tool-tag">6061 Al Fixture</span>
+        <button class="tech-toggle" onclick="toggleTech(this)"><span class="arrow">▶</span> Technical Approach</button>
+        <div class="tech-body">
+          <h4>Technical Approach</h4>
+          <ul>
+            <li><strong>Gating & Flow:</strong> Designed complete runner, gating, and venting for Rear Node dual-cavity die from scratch using NADCA and Buhler equations to correctly size gate velocity and vent area across both cavities; led through trim die buy-off. Ran multi-concept MAGMASOFT flow simulations on Torque Box redesign — evaluated melt velocity, temperature distribution, pressure trace, and fill pattern across candidate designs before any steel commitment.</li>
+            <li><strong>Thermal Optimization:</strong> Simulated die thermal systems for Torque Box, Rear Node, and Shock Tower in MAGMASOFT — mapped surface temperature distribution, identified hot spots driving die soldering and heat checking, and redesigned cooling circuit routing and sequencing to achieve balanced die face temperatures. Shock Tower cooling redesign achieved 100s → 90s cycle time reduction and extended insert service intervals.</li>
+            <li><strong>Structural & Fixture:</strong> Performed ANSYS structural analysis on cover/ejector halves and DCM platens to size support pillar preload, eliminating flash from die deflection under shot pressure. Designed a 6061 machined aluminum best-fit gauge fixture for Shock Tower castings enabling instant production-floor distortion measurement without CMM setup, accelerating root cause turnaround on quality holds.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -397,6 +415,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
         </div>
       </div>
 
+      <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
+
       <div class="obj-result">
         <p><strong>Objective:</strong> Eliminate stainless steel hard plumbing with compression fittings — identified as the primary driver of 6-week die refurbishment cycles on GIGA dies.</p>
         <p><strong>Result:</strong> Die refurbishment turnaround reduced from 6 weeks to 2 weeks (67% reduction). Design subsequently adopted as the standard cooling interface on the FRUB die development program.</p>
@@ -409,15 +429,15 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
       </div>
 
       <div class="tech-details">
-        <h4>Technical Approach</h4>
-        <ul>
-          <li><strong>Design:</strong> Machined 6061/6063 Al manifold bodies with brass quick-connect couplers and O-ring face seals — replacing stainless steel hard plumbing with a standardized plug-and-play interface rated for HPDC cooling circuit pressures and temperatures. Design accounted for differential thermal expansion between the Al manifold and die steel body, swarf contamination ingress, and field-replaceable sealing elements.</li>
-          <li><strong>End-to-End Ownership:</strong> Produced all machining drawings, managed fabrication, led die installation, and trained technicians on connection procedure. Trialed on Die S to validate sealing performance under production conditions before implementing on Die Q.</li>
-          <li><strong>Impact &amp; Adoption:</strong> Reduced refurbishment turnaround from 6 weeks to 2 weeks by eliminating custom plumbing rework on every die swap. Technology adopted as the standard cooling interface on the FRUB die development program — demonstrating cross-program impact beyond original scope.</li>
-        </ul>
-      </div>
-      <div class="tools-row">
-        <span class="tool-tag">CATIA V5</span><span class="tool-tag">6061/6063 Al</span><span class="tool-tag">Brass Couplers</span><span class="tool-tag">O-Ring Seals</span>
+        <button class="tech-toggle" onclick="toggleTech(this)"><span class="arrow">▶</span> Technical Approach</button>
+        <div class="tech-body">
+          <h4>Technical Approach</h4>
+          <ul>
+            <li><strong>Design:</strong> Machined 6061/6063 Al manifold bodies with brass quick-connect couplers and O-ring face seals — replacing stainless steel hard plumbing with a standardized plug-and-play interface rated for HPDC cooling circuit pressures and temperatures. Design accounted for differential thermal expansion between the Al manifold and die steel body, swarf contamination ingress, and field-replaceable sealing elements.</li>
+            <li><strong>End-to-End Ownership:</strong> Produced all machining drawings, managed fabrication, led die installation, and trained technicians on connection procedure. Trialed on Die S to validate sealing performance under production conditions before implementing on Die Q.</li>
+            <li><strong>Impact &amp; Adoption:</strong> Reduced refurbishment turnaround from 6 weeks to 2 weeks by eliminating custom plumbing rework on every die swap. Technology adopted as the standard cooling interface on the FRUB die development program — demonstrating cross-program impact beyond original scope.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -439,6 +459,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
         </div>
       </div>
 
+      <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
+
       <div class="obj-result">
         <p><strong>Objective:</strong> Establish a unified GD&amp;T and datum scheme standard for Tesla GIGA die tooling, balancing three competing demands: in-production thermal expansion, flash prevention at parting surfaces, and insert interchangeability during refurbishment.</p>
         <p><strong>Result:</strong> Standard adopted as governing reference in ENOVIA/PLM for all GIGA die releases. Saved 2 hours per insert replacement in the tool shop and reduced supplier drawing interpretation errors during die buy-off.</p>
@@ -451,15 +473,15 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
       </div>
 
       <div class="tech-details">
-        <h4>Technical Approach</h4>
-        <ul>
-          <li><strong>Standard Scope:</strong> Authored GD&amp;T and datum scheme standard balancing three competing functional demands simultaneously — thermal expansion compensation across HPDC cycling temperatures (~200°C delta), flash prevention at parting surface interfaces under 6200-ton clamp force, and insert-to-holder fit tolerances enabling drop-in replacement without hand fitting or shimming.</li>
-          <li><strong>Tolerance Method:</strong> Applied RSS (Root Sum Square) statistical tolerance analysis to determine probable assembly variation across the die insert stack, avoiding unnecessarily tight tolerances that inflate supplier machining cost with no quality benefit over worst-case arithmetic stackup. Output directly sized locating features and interface clearances.</li>
-          <li><strong>Deployment:</strong> Integrated standard into ENOVIA/PLM as the governing reference for all GIGA die releases across Lathrop and Fremont. Consistent supplier drawing interpretation reduced revision cycles at die buy-off; defined insert datum schemes saved 2 hrs per replacement in the tool shop by eliminating fit-and-adjust.</li>
-        </ul>
-      </div>
-      <div class="tools-row">
-        <span class="tool-tag">GD&amp;T</span><span class="tool-tag">RSS Tolerance Analysis</span><span class="tool-tag">ENOVIA/PDM</span><span class="tool-tag">CATIA V5</span>
+        <button class="tech-toggle" onclick="toggleTech(this)"><span class="arrow">▶</span> Technical Approach</button>
+        <div class="tech-body">
+          <h4>Technical Approach</h4>
+          <ul>
+            <li><strong>Standard Scope:</strong> Authored GD&amp;T and datum scheme standard balancing three competing functional demands simultaneously — thermal expansion compensation across HPDC cycling temperatures (~200°C delta), flash prevention at parting surface interfaces under 6200-ton clamp force, and insert-to-holder fit tolerances enabling drop-in replacement without hand fitting or shimming.</li>
+            <li><strong>Tolerance Method:</strong> Applied RSS (Root Sum Square) statistical tolerance analysis to determine probable assembly variation across the die insert stack, avoiding unnecessarily tight tolerances that inflate supplier machining cost with no quality benefit over worst-case arithmetic stackup. Output directly sized locating features and interface clearances.</li>
+            <li><strong>Deployment:</strong> Integrated standard into ENOVIA/PLM as the governing reference for all GIGA die releases across Lathrop and Fremont. Consistent supplier drawing interpretation reduced revision cycles at die buy-off; defined insert datum schemes saved 2 hrs per replacement in the tool shop by eliminating fit-and-adjust.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -481,6 +503,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
         </div>
       </div>
 
+      <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
+
       <div class="obj-result">
         <p><strong>Objective:</strong> Eliminate manual drafting of 20–50 sub-insert drawings per die set — a process taking up to 2 hours per drawing — by building an automated 3D-to-2D drawing generation pipeline.</p>
         <p><strong>Result:</strong> Per-drawing turnaround reduced from up to 2 hours to near-instant output. Pipeline deployed to supplier drawing releases as production-quality deliverables, validating output against Tesla's production drawing standard.</p>
@@ -493,15 +517,15 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
       </div>
 
       <div class="tech-details">
-        <h4>Technical Approach</h4>
-        <ul>
-          <li><strong>Pipeline Architecture:</strong> Built a 3D-to-2D drawing automation pipeline using PowerShell scripting against the CATIA V5 COM API, with AI-assisted code generation (Claude) to develop and iterate scripts against specific engineering requirements. The pipeline reads sub-insert CAD geometry, extracts view projections, and auto-populates drawing templates with dimensional and annotation data.</li>
-          <li><strong>Engineering Requirements:</strong> Defined all automation logic against the internally developed GIGA die GD&amp;T standard — datum scheme placement, feature control frame callouts, tolerance values by insert zone, title block field population, and revision table logic. Output covers sub-insert production drawings and ignition schematics: 20–50 drawings per die set.</li>
-          <li><strong>Validation &amp; Deployment:</strong> Deployed pipeline output directly to supplier drawing releases — output met Tesla's production drawing quality bar, validating this as an engineering deliverable pipeline rather than an internal productivity tool. Per-drawing turnaround reduced from up to 2 hours to near-instant generation.</li>
-        </ul>
-      </div>
-      <div class="tools-row">
-        <span class="tool-tag">PowerShell</span><span class="tool-tag">CATIA V5 API</span><span class="tool-tag">AI-Assisted Scripting</span><span class="tool-tag">GD&amp;T Automation</span>
+        <button class="tech-toggle" onclick="toggleTech(this)"><span class="arrow">▶</span> Technical Approach</button>
+        <div class="tech-body">
+          <h4>Technical Approach</h4>
+          <ul>
+            <li><strong>Pipeline Architecture:</strong> Built a 3D-to-2D drawing automation pipeline using PowerShell scripting against the CATIA V5 COM API, with AI-assisted code generation (Claude) to develop and iterate scripts against specific engineering requirements. The pipeline reads sub-insert CAD geometry, extracts view projections, and auto-populates drawing templates with dimensional and annotation data.</li>
+            <li><strong>Engineering Requirements:</strong> Defined all automation logic against the internally developed GIGA die GD&amp;T standard — datum scheme placement, feature control frame callouts, tolerance values by insert zone, title block field population, and revision table logic. Output covers sub-insert production drawings and ignition schematics: 20–50 drawings per die set.</li>
+            <li><strong>Validation &amp; Deployment:</strong> Deployed pipeline output directly to supplier drawing releases — output met Tesla's production drawing quality bar, validating this as an engineering deliverable pipeline rather than an internal productivity tool. Per-drawing turnaround reduced from up to 2 hours to near-instant generation.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -523,6 +547,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
         </div>
       </div>
 
+      <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
+
       <div class="obj-result">
         <p><strong>Objective:</strong> Replace unstructured OneDrive file sharing with revision-controlled PLM for the GIGA Castings Tooling team across Lathrop and Fremont — establishing the first structured data management system for the tooling organization.</p>
         <p><strong>Result:</strong> Full migration completed across both sites. CAD standards, standard component library, and auditable release workflow deployed. Dassault engaged directly to resolve large-dataset migration challenges.</p>
@@ -535,18 +561,112 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
       </div>
 
       <div class="tech-details">
-        <h4>Technical Approach</h4>
-        <ul>
-          <li><strong>Migration:</strong> Led full migration of GIGA Castings tooling CAD from unstructured OneDrive storage to 3DEXPERIENCE PLM across Lathrop and Fremont — establishing revision-controlled, searchable data management for the first time on the tooling team. Worked directly with Dassault to resolve large-dataset migration challenges and ensure cross-site data integrity.</li>
-          <li><strong>Standards &amp; Library:</strong> Authored formal CAD standards documentation covering structure, naming conventions, and release procedures; configured a standard component library within 3DX to standardize common die components and tolerances across GIGA die families, reducing redundant design work program-to-program.</li>
-          <li><strong>Workflow:</strong> Created a dedicated Castings Tooling collaborative space in 3DX with a customized design release workflow suited to tooling-specific approval requirements — replacing ad hoc file sharing with a structured, auditable release process traceable to die revision history.</li>
-        </ul>
-      </div>
-      <div class="tools-row">
-        <span class="tool-tag">3DEXPERIENCE</span><span class="tool-tag">ENOVIA/PDM</span><span class="tool-tag">CATIA V5</span><span class="tool-tag">Dassault Systèmes</span>
+        <button class="tech-toggle" onclick="toggleTech(this)"><span class="arrow">▶</span> Technical Approach</button>
+        <div class="tech-body">
+          <h4>Technical Approach</h4>
+          <ul>
+            <li><strong>Migration:</strong> Led full migration of GIGA Castings tooling CAD from unstructured OneDrive storage to 3DEXPERIENCE PLM across Lathrop and Fremont — establishing revision-controlled, searchable data management for the first time on the tooling team. Worked directly with Dassault to resolve large-dataset migration challenges and ensure cross-site data integrity.</li>
+            <li><strong>Standards &amp; Library:</strong> Authored formal CAD standards documentation covering structure, naming conventions, and release procedures; configured a standard component library within 3DX to standardize common die components and tolerances across GIGA die families, reducing redundant design work program-to-program.</li>
+            <li><strong>Workflow:</strong> Created a dedicated Castings Tooling collaborative space in 3DX with a customized design release workflow suited to tooling-specific approval requirements — replacing ad hoc file sharing with a structured, auditable release process traceable to die revision history.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
+
+    <!-- ── PROJECT 7: MACK BUMPER ── -->
+    <div class="project">
+      <span class="project-tag">Sheet Metal & Plastic Design · Mack Anthem · Segula / Volvo Trucks NA</span>
+      <div class="project-title">Front Steel Bumper & Plastic Deflector Design — Mack Anthem</div>
+
+      <div class="carousel" id="c6">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="images/bumper1.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Front steel bumper mounting bracket — Mack Anthem</div></div>
+          <div class="carousel-slide"><img src="images/bumper2.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Front plastic deflector — draft analysis and parting line</div></div>
+          <div class="carousel-slide"><img src="images/bumper3.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">GD&T drawing package — bumper bracket interface tolerances</div></div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('c6',-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel('c6',1)">&#8250;</button>
+        <div class="carousel-dots" id="c6-dots">
+          <div class="dot active" onclick="goSlide('c6',0)"></div>
+          <div class="dot" onclick="goSlide('c6',1)"></div>
+          <div class="dot" onclick="goSlide('c6',2)"></div>
+        </div>
+      </div>
+
+      <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
+
+      <div class="obj-result">
+        <p><strong>Objective:</strong> Design the front steel bumper mounting brackets and plastic deflectors for the Mack Anthem platform from scratch — meeting structural load requirements, assembly clearance constraints, and aerodynamic profile targets through production release.</p>
+        <p><strong>Result:</strong> Full bracket and deflector design released to production with complete GD&T drawing packages. Bumper-to-frame alignment and panel gap consistency controlled across production builds through defined datum schemes and critical interface tolerances.</p>
+      </div>
+
+      <div class="metrics">
+        <span class="metric-chip">Concept through production release</span>
+        <span class="metric-chip">Steel + injection molded components</span>
+        <span class="metric-chip">Full GD&T drawing package</span>
+        <span class="metric-chip">Mack Anthem platform</span>
+      </div>
+
+      <div class="tech-details">
+        <button class="tech-toggle" onclick="toggleTech(this)"><span class="arrow">▶</span> Technical Approach</button>
+        <div class="tech-body">
+          <h4>Technical Approach</h4>
+          <ul>
+            <li><strong>Steel Bracket Design:</strong> Designed front steel bumper mounting brackets from scratch in CATIA V5 as sheet metal formed components — defined bend radii, material grain direction, and flange geometry to satisfy structural load requirements and assembly clearance constraints across the bumper-to-frame interface.</li>
+            <li><strong>Plastic Deflector Design:</strong> Designed front plastic deflectors as injection molded components — applied draft analysis, parting line definition, and wall thickness optimization in CATIA V5 to ensure moldability while maintaining the required aerodynamic profile and fit to the bumper assembly.</li>
+            <li><strong>GD&T Drawing Package:</strong> Developed full GD&T drawing packages for both steel brackets and plastic deflectors — defined datum schemes and critical interface tolerances to control bumper-to-frame alignment and panel gap consistency across production builds. Released all installation and sub-assembly requirement drawings through Windchill PLM.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECT 8: FIXTURE DESIGN ── -->
+    <div class="project">
+      <span class="project-tag">Production Fixture Design · Mack Macungie Plant · Segula / Volvo Trucks NA</span>
+      <div class="project-title">Production Fixture Design — Mack Macungie Assembly Plant</div>
+
+      <div class="carousel" id="c7">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="images/fixture1.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Engine rack fixture — Mack Macungie Plant</div></div>
+          <div class="carousel-slide"><img src="images/fixture2.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Turbo pipe fixture design</div></div>
+          <div class="carousel-slide"><img src="images/fixture3.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Floor mat drilling fixture — high-volume production line</div></div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('c7',-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel('c7',1)">&#8250;</button>
+        <div class="carousel-dots" id="c7-dots">
+          <div class="dot active" onclick="goSlide('c7',0)"></div>
+          <div class="dot" onclick="goSlide('c7',1)"></div>
+          <div class="dot" onclick="goSlide('c7',2)"></div>
+        </div>
+      </div>
+
+      <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
+
+      <div class="obj-result">
+        <p><strong>Objective:</strong> Design production assembly and drilling fixtures for the Mack Macungie Plant to control assembly sequence and ensure dimensional stability across high-volume manufacturing lines.</p>
+        <p><strong>Result:</strong> Engine rack, turbo pipe, and floor mat drilling fixtures designed and deployed to production lines. Reverse engineering of existing fixtures extended the program to cover additional high-volume manufacturing requirements.</p>
+      </div>
+
+      <div class="metrics">
+        <span class="metric-chip">Engine rack fixture</span>
+        <span class="metric-chip">Turbo pipe fixture</span>
+        <span class="metric-chip">Floor mat drilling fixture</span>
+        <span class="metric-chip">High-volume production lines</span>
+      </div>
+
+      <div class="tech-details">
+        <button class="tech-toggle" onclick="toggleTech(this)"><span class="arrow">▶</span> Technical Approach</button>
+        <div class="tech-body">
+          <h4>Technical Approach</h4>
+          <ul>
+            <li><strong>Fixture Design:</strong> Designed production fixtures for Mack Macungie Plant assembly lines — including engine rack, turbo pipe, and floor mat drilling fixtures — in CATIA V5, controlling assembly sequence and part location to achieve dimensional stability across high-volume build cycles.</li>
+            <li><strong>Reverse Engineering:</strong> Reverse engineered existing production fixtures to capture as-built geometry and adapt designs for high-volume manufacturing requirements, ensuring backward compatibility with current line tooling.</li>
+            <li><strong>Dimensional Control:</strong> Collaborated on measurement point documentation for prototype and production-level part inspection, and coordinated with assembly teams to define fixture locating schemes that maintained dimensional stability through the full assembly sequence.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
   </section><!-- /projects -->
 
@@ -561,8 +681,7 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
         <div class="tl-date">July 2020 – Present</div>
         <div class="tl-company">Tesla Motors — Lathrop, CA</div>
         <div class="tl-role">Sr. Tooling Engineer – HPDC &nbsp;|&nbsp; Acting Engineering Supervisor (Jan 2023 – Jul 2025)</div>
-        <ul class="tl-bullets">          
-        </ul>
+        <ul class="tl-bullets"></ul>
       </div>
 
       <div class="tl-item">
@@ -570,11 +689,9 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
         <div class="tl-date">July 2018 – May 2020</div>
         <div class="tl-company">Segula Technologies (Volvo Trucks NA) — Greensboro, NC</div>
         <div class="tl-role">Design Engineer – CAB &nbsp;|&nbsp; Geometrical Assurance Engineer &nbsp;|&nbsp; Fixture Design Engineer</div>
-        <ul class="tl-bullets">          
-        </ul>
+        <ul class="tl-bullets"></ul>
       </div>
 
-      
     </div>
   </section>
 
@@ -604,10 +721,8 @@ nav ul li a:hover{background:rgba(200,134,10,0.15);color:var(--accent-light);pad
 
 <script>
 const carousels = {};
-function initCarousel(id) {
-  carousels[id] = 0;
-}
-['c1','c2','c3','c4','c5'].forEach(initCarousel);
+function initCarousel(id) { carousels[id] = 0; }
+['c1','c2','c3','c4','c5','c6','c7'].forEach(initCarousel);
 
 function updateCarousel(id) {
   const el = document.getElementById(id);
@@ -629,6 +744,12 @@ function moveCarousel(id, dir) {
 function goSlide(id, idx) {
   carousels[id] = idx;
   updateCarousel(id);
+}
+
+function toggleTech(btn) {
+  const body = btn.nextElementSibling;
+  btn.classList.toggle('open');
+  body.classList.toggle('open');
 }
 </script>
 
