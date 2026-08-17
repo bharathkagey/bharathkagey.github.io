@@ -314,8 +314,15 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
       <span class="project-tag">Die Development · HPDC · Tesla GIGA Castings</span>
       <div class="project-title">FRUB Die Development — 200,000 Shot Die Life Program</div>
 
-      <div style="margin-bottom:1.2rem;border-radius:6px;overflow:hidden;border:1px solid var(--border)">
-        <img src="images/9.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block">
+      <div class="carousel" id="c0">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="images/FRUB_jpg.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">FRUB HPDC die — 200,000 shot life program, Tesla GIGA Castings</div></div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel('c0',-1)">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarousel('c0',1)">&#8250;</button>
+        <div class="carousel-dots" id="c0-dots">
+          <div class="dot active" onclick="goSlide('c0',0)"></div>
+        </div>
       </div>
 
       <p style="font-size:0.68rem;color:#6b7a99;font-family:'Source Code Pro',monospace;margin-top:0.4rem;font-style:italic;">&#9432; All images are sourced from publicly available materials and do not contain any proprietary or confidential company data.</p>
@@ -356,16 +363,14 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
 
       <div class="carousel" id="c1">
         <div class="carousel-track">
-          <div class="carousel-slide"><img src="images/2.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Multi-concept fill trace comparison — melt velocity and temperature distribution at each gate</div></div>
-          <div class="carousel-slide"><img src="images/3.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Dual-cavity runner and venting system designed from scratch using NADCA and Buhler equations</div></div>
-          <div class="carousel-slide"><img src="images/4.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Cover and ejector half thermal simulation — cooling circuit optimization and soldering risk zones</div></div>
+          <div class="carousel-slide"><img src="images/Rearnode_jpg.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Rear Node HPDC casting — dual-cavity die runner and venting system</div></div>
+          <div class="carousel-slide"><img src="images/download.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Torque Box & Shock Tower — thermal optimization and cycle time reduction</div></div>
         </div>
         <button class="carousel-btn prev" onclick="moveCarousel('c1',-1)">&#8249;</button>
         <button class="carousel-btn next" onclick="moveCarousel('c1',1)">&#8250;</button>
         <div class="carousel-dots" id="c1-dots">
           <div class="dot active" onclick="goSlide('c1',0)"></div>
           <div class="dot" onclick="goSlide('c1',1)"></div>
-          <div class="dot" onclick="goSlide('c1',2)"></div>
         </div>
       </div>
 
@@ -404,14 +409,16 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
 
       <div class="carousel" id="c2">
         <div class="carousel-track">
-          <div class="carousel-slide"><img src="images/water_manifold.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Brass quick-connect coupler with O-ring face seals — plug-and-play cooling interface</div></div>
-          <div class="carousel-slide"><img src="images/coupler.webp" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Machined aluminum manifold body — standardized cooling circuit interface for HPDC dies</div></div>
+          <div class="carousel-slide"><img src="images/Coupler.webp" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Brass quick-connect coupler with O-ring face seals — plug-and-play cooling interface</div></div>
+          <div class="carousel-slide"><img src="images/al_manifold.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Machined 6061/6063 aluminum manifold body — standardized HPDC die cooling interface</div></div>
+          <div class="carousel-slide"><img src="images/water_manifold.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Cooling circuit manifold assembly — replacing stainless hard plumbing with quick-connect system</div></div>
         </div>
         <button class="carousel-btn prev" onclick="moveCarousel('c2',-1)">&#8249;</button>
         <button class="carousel-btn next" onclick="moveCarousel('c2',1)">&#8250;</button>
         <div class="carousel-dots" id="c2-dots">
           <div class="dot active" onclick="goSlide('c2',0)"></div>
           <div class="dot" onclick="goSlide('c2',1)"></div>
+          <div class="dot" onclick="goSlide('c2',2)"></div>
         </div>
       </div>
 
@@ -448,8 +455,8 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
 
       <div class="carousel" id="c3">
         <div class="carousel-track">
-          <div class="carousel-slide"><div class="slide-visual">📐<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Datum Scheme Framework</span></div><div class="slide-caption">Three-plane datum structure for GIGA die inserts — balancing thermal expansion, flash, and replaceability</div></div>
-          <div class="carousel-slide"><div class="slide-visual">📊<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">RSS Tolerance Stack Analysis</span></div><div class="slide-caption">Statistical tolerance analysis — probable assembly variation vs. worst-case to optimize manufacturing cost</div></div>
+          <div class="carousel-slide"><img src="images/Gd_T_jpg.webp" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">GD&T datum scheme framework — three-plane structure for GIGA die inserts</div></div>
+          <div class="carousel-slide"><img src="images/GD-T.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">RSS statistical tolerance analysis — worst-case vs. probable assembly variation</div></div>
         </div>
         <button class="carousel-btn prev" onclick="moveCarousel('c3',-1)">&#8249;</button>
         <button class="carousel-btn next" onclick="moveCarousel('c3',1)">&#8250;</button>
@@ -492,14 +499,12 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
 
       <div class="carousel" id="c4">
         <div class="carousel-track">
-          <div class="carousel-slide"><div class="slide-visual">💻<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Pipeline Architecture</span></div><div class="slide-caption">3D CAD model → PowerShell script → auto-populated 2D drawing with GD&amp;T annotations</div></div>
-          <div class="carousel-slide"><div class="slide-visual">📄<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Auto-Generated Drawing Output</span></div><div class="slide-caption">Sub-insert production drawing — datum callouts, tolerance values, title block auto-populated from GD&amp;T standard</div></div>
+          <div class="carousel-slide"><img src="images/AI_jpg.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">AI-assisted PowerShell pipeline — automated 3D-to-2D drawing generation via CATIA V5 API</div></div>
         </div>
         <button class="carousel-btn prev" onclick="moveCarousel('c4',-1)">&#8249;</button>
         <button class="carousel-btn next" onclick="moveCarousel('c4',1)">&#8250;</button>
         <div class="carousel-dots" id="c4-dots">
           <div class="dot active" onclick="goSlide('c4',0)"></div>
-          <div class="dot" onclick="goSlide('c4',1)"></div>
         </div>
       </div>
 
@@ -536,8 +541,8 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
 
       <div class="carousel" id="c5">
         <div class="carousel-track">
-          <div class="carousel-slide"><div class="slide-visual">☁️<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">PLM Migration Architecture</span></div><div class="slide-caption">OneDrive unstructured file storage → 3DEXPERIENCE structured PDM across Lathrop and Fremont</div></div>
-          <div class="carousel-slide"><div class="slide-visual">📚<span style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-family:monospace">Standard Component Library</span></div><div class="slide-caption">Configured 3DX component library — standardized die components and tolerances across GIGA die families</div></div>
+          <div class="carousel-slide"><img src="images/3dexperience_jpg.webp" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">3DEXPERIENCE PLM — structured PDM migration across Lathrop and Fremont sites</div></div>
+          <div class="carousel-slide"><img src="images/3dx.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">3DX standard component library — CATIA Mold Tooling Design app for die component standardization</div></div>
         </div>
         <button class="carousel-btn prev" onclick="moveCarousel('c5',-1)">&#8249;</button>
         <button class="carousel-btn next" onclick="moveCarousel('c5',1)">&#8250;</button>
@@ -581,16 +586,14 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
 
       <div class="carousel" id="c6">
         <div class="carousel-track">
-          <div class="carousel-slide"><img src="images/bumper1.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Front steel bumper mounting bracket — Mack Anthem</div></div>
-          <div class="carousel-slide"><img src="images/bumper2.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Front plastic deflector — draft analysis and parting line</div></div>
-          <div class="carousel-slide"><img src="images/bumper3.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">GD&T drawing package — bumper bracket interface tolerances</div></div>
+          <div class="carousel-slide"><img src="images/bumper.webp" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Front bumper — Mack Anthem plastic deflector design</div></div>
+          <div class="carousel-slide"><img src="images/bracket.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Steel mounting bracket — sheet metal design with GD&T interface tolerances</div></div>
         </div>
         <button class="carousel-btn prev" onclick="moveCarousel('c6',-1)">&#8249;</button>
         <button class="carousel-btn next" onclick="moveCarousel('c6',1)">&#8250;</button>
         <div class="carousel-dots" id="c6-dots">
           <div class="dot active" onclick="goSlide('c6',0)"></div>
           <div class="dot" onclick="goSlide('c6',1)"></div>
-          <div class="dot" onclick="goSlide('c6',2)"></div>
         </div>
       </div>
 
@@ -628,16 +631,12 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
 
       <div class="carousel" id="c7">
         <div class="carousel-track">
-          <div class="carousel-slide"><img src="images/fixture1.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Engine rack fixture — Mack Macungie Plant</div></div>
-          <div class="carousel-slide"><img src="images/fixture2.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Turbo pipe fixture design</div></div>
-          <div class="carousel-slide"><img src="images/fixture3.jpg" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Floor mat drilling fixture — high-volume production line</div></div>
+          <div class="carousel-slide"><img src="images/engine_fixture.avif" style="width:100%;aspect-ratio:16/7;object-fit:cover;display:block"><div class="slide-caption">Engine rack fixture — Mack Macungie Plant production line</div></div>
         </div>
         <button class="carousel-btn prev" onclick="moveCarousel('c7',-1)">&#8249;</button>
         <button class="carousel-btn next" onclick="moveCarousel('c7',1)">&#8250;</button>
         <div class="carousel-dots" id="c7-dots">
           <div class="dot active" onclick="goSlide('c7',0)"></div>
-          <div class="dot" onclick="goSlide('c7',1)"></div>
-          <div class="dot" onclick="goSlide('c7',2)"></div>
         </div>
       </div>
 
@@ -722,7 +721,7 @@ nav ul li a:hover{background:rgba(37,99,235,0.15);color:var(--accent-light);padd
 <script>
 const carousels = {};
 function initCarousel(id) { carousels[id] = 0; }
-['c1','c2','c3','c4','c5','c6','c7'].forEach(initCarousel);
+['c0','c1','c2','c3','c4','c5','c6','c7'].forEach(initCarousel);
 
 function updateCarousel(id) {
   const el = document.getElementById(id);
